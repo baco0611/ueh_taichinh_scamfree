@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'iCiel Queulat Uni';
+    src: url('iCielQueulatUni-Regular.eot');
+    src: url('iCielQueulatUni-Regular.eot?#iefix') format('embedded-opentype'),
+        url('iCielQueulatUni-Regular.woff2') format('woff2'),
+        url('iCielQueulatUni-Regular.woff') format('woff'),
+        url('iCielQueulatUni-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

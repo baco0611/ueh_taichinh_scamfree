@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import DefaultHeader from '../DefaultHeader/DefaultHeader'
+import DefaultFooter from '../DefaultFooter/DefaultFooter'
 
 export default function Default() {
     return (
@@ -8,6 +9,8 @@ export default function Default() {
             <DefaultHeader/>
 
             <Outlet/>
+
+            <DefaultFooter/>
         </div>
     )
 }

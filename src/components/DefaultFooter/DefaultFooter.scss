@@ -1,0 +1,35 @@
+@use "../../variable.scss" as var;
+
+#defaultFooter {
+    width: 100%;
+    background-color: var.$primary-color;
+
+    padding: 35px;
+
+    .info-box {
+        color: white;
+        padding-bottom: 30px;
+        
+        h2 {
+            font-family: var.$side-font;
+            font-size: 15px;
+            padding-bottom: 20px;
+        }
+
+        p, a {
+            color: white;
+            font-size: 15px;
+            line-height: 20px;
+            padding-bottom: 10px;
+        }
+
+        a:hover {
+            color: var.$highlight-color;
+        }
+
+        i, svg {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+    }
+}

@@ -1,5 +1,19 @@
 @use './variable.scss' as var;
 
+@font-face {
+    font-family: 'iCiel Queulat Uni';
+    src: url('../src/assets/font/iCielQueulatUni-Regular.eot');
+    src: url('../src/assets/font/iCielQueulatUni-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../src/assets/font/iCielQueulatUni-Regular.woff2') format('woff2'),
+        url('../src/assets/font/iCielQueulatUni-Regular.woff') format('woff'),
+        url('../src/assets/font/iCielQueulatUni-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 .wrapper{
     max-width: min(90%, 1440px);
     margin: 0 auto;
