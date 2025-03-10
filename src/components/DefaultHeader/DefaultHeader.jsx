@@ -3,9 +3,14 @@ import "./DefaultHeader.scss"
 import uehLogo from "./picture/uehLogo.png"
 import doanLogo from "./picture/doanLogo.png"
 import SOFLogo from "./picture/SOFLogo.png"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import clsx from 'clsx'
 
 export default function DefaultHeader() {
+
+    const location = useLocation()
+    console.log(location.pathname)
+
     return (
         <div id='defaultHeader'>
             <div className='logo'>
@@ -16,16 +21,24 @@ export default function DefaultHeader() {
             <div className='route'>
                 <ul>
                     <li>
-                        <Link to="/">Trang chủ</Link>
+                        <Link className={clsx({
+                            active: location.pathname == "/"
+                        })} to="/">Trang chủ</Link>
                     </li>
                     <li>
-                        <Link to="/game">Game</Link>
+                        <Link className={clsx({
+                            active: location.pathname == "/game"
+                        })} to="/game">Game</Link>
                     </li>
                     <li>
-                        <Link to="/activities">Hoạt động</Link>
+                        <Link className={clsx({
+                            active: location.pathname == "/activities"
+                        })} to="/activities">Hoạt động</Link>
                     </li>
                     <li>
-                        <Link to="/handbook">Sổ tay phòng chống</Link>
+                        <Link className={clsx({
+                            active: location.pathname == "/handbook"
+                        })} to="/handbook">Sổ tay phòng chống</Link>
                     </li>
                 </ul>
             </div>
