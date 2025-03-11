@@ -9,6 +9,10 @@
     justify-content: space-between;
     padding: 0 30px;
 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     .logo, .route {
         height: 100%;
     }
