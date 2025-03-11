@@ -1,0 +1,73 @@
+@use "../../variable.scss" as var;
+
+#banner {
+    width: 100%;
+    aspect-ratio: 16/6;
+    background-color: black;
+}
+
+#home-section {
+    background-image: url("./img/background.png");
+    background-position: top;
+    background-size: cover;
+    background-position-y: calc(-450px);
+    background-repeat: no-repeat;
+    .container {
+        padding: 50px 0;
+
+        .mission {
+            .header {
+                height: 110px;
+                margin: 0 auto;
+                padding-bottom: 15px;
+            }
+
+            .content {
+                width: max(65%, 600px);
+                margin: 0 auto;
+                padding: 40px;
+                border-radius: 20px;
+                position: relative;
+                text-align: justify;
+                font-size: 18px;
+                line-height: 1.6;
+                background: white;
+                border: rgb(254, 121, 33) solid 3px;
+
+                box-shadow: 
+                inset 0 0 10px rgba(254, 121, 33, 1),   /* Viền cam đậm */
+                inset 0 0 15px rgba(254, 121, 33, 0.75),   /* Viền cam đậm */
+                inset 0 0 17px rgba(254, 121, 33, 0.5),   /* Viền cam đậm */
+                inset 0 0 20px rgba(254, 121, 33, 0.25);   /* Viền cam đậm */
+
+                p {
+                    color: var.$primary-color;
+                    font-weight: 500;
+                    font-size: 22px;
+                    padding-bottom: 25px;
+                }
+
+                .side-content {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                .sign-content {
+                    left: 0;
+                    width: 50%;
+                    min-width: 370px;
+
+                    p {
+                        padding-bottom: 5px;
+                        line-height: 1;
+                        font-weight: 700;
+                        text-align: center;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}
