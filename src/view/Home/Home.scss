@@ -10,10 +10,10 @@
     background-image: url("./img/background.png");
     background-position: top;
     background-size: cover;
-    background-position-y: calc(-450px);
+    // background-position-y: calc(-450px);
     background-repeat: no-repeat;
     .container {
-        padding: 50px 0;
+        padding: 75px 0;
 
         .mission {
             padding-bottom: 45px;
@@ -82,7 +82,7 @@
         }
 
         .game {
-            padding-bottom: 50px;
+            padding-bottom: 75px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -94,6 +94,91 @@
 
             img.thumbnail {
                 width: min(900px, 90%);
+            }
+        }
+
+        .checklist {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            img.title {
+                width: min(545px, 90%);
+                padding-bottom: 35px;
+            }
+
+            .content {
+                width: min(100%, 900px);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .element {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                div:nth-child(1) {
+                    // width: 13%;
+                    img {
+                        height: 120px;
+                    }
+                }
+
+                div:nth-child(2) {
+                    width: 82%;
+                    height: 110px;
+                    background: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 40px;
+                    border: solid rgb(254, 121, 33) 3.5px;
+
+                    position: relative;
+                    z-index: 1;
+                    padding: 5px;
+                    &::before {
+                        content: '';
+
+                        position: absolute;
+                        z-index: 2;
+                        top: 2px;
+                        bottom: 2px;
+                        left: 2px;
+                        right: 2px;
+
+                        background-color: transparent;
+                        border-radius: 35px;
+                        border: solid rgb(254, 121, 33) 2px;
+                    }
+
+                    p {
+                        font-family: var.$side-font;
+                        color: var.$primary-color;
+                        font-size: 28px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .feedback {
+            padding-top: 30px;
+
+            position: relative;
+
+            a {
+                position: absolute;
+                right: 5vw;
+
+                img {
+                    height: 55px;
+                }
             }
         }
     }

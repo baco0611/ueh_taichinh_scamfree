@@ -5,6 +5,10 @@ import mission from "./img/mission.png"
 import overview from "./img/overview.png"
 import game from "./img/game.png"
 import gameThumbnail from "./img/gameThumbnail.png"
+import checklist from "./img/checklist.png"
+import checklistButton from "./img/checklistButton.png"
+import feedback from "./img/feedback.png"
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -35,6 +39,42 @@ export default function Home() {
                 <div className='game wrapper'>
                     <img className='title' src={game}/>
                     <img className='thumbnail' src={gameThumbnail}/>
+                </div>
+
+                <div className='checklist wrapper'>
+                    <img className='title' src={checklist}/>
+                    <div className='content'>
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton}/>
+                            </div>
+                            <div>
+                                <p>Một số hình thức lừa đảo phổ biến</p>
+                            </div>
+                        </div>
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton}/>
+                            </div>
+                            <div>
+                                <p>Cách nhận biết và <br/> phòng chống lừa đảo</p>
+                            </div>
+                        </div>
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton}/>
+                            </div>
+                            <div>
+                                <p>Một số bài báo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='feedback'>
+                    <Link to="/feedback">
+                        <img src={feedback}/>
+                    </Link>
                 </div>
             </div>
         </div>
