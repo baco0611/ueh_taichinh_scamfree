@@ -16,6 +16,8 @@
         padding: 50px 0;
 
         .mission {
+            padding-bottom: 45px;
+
             .header {
                 height: 110px;
                 margin: 0 auto;
@@ -43,7 +45,7 @@
                 p {
                     color: var.$primary-color;
                     font-weight: 500;
-                    font-size: 22px;
+                    font-size: 25px;
                     padding-bottom: 25px;
                 }
 
@@ -67,6 +69,31 @@
                         font-style: italic;
                     }
                 }
+            }
+        }
+
+        .overview {
+            padding-bottom: 75px;
+
+            img.title {
+                margin: 0 auto;
+                width: min(900px, 90%);
+            }
+        }
+
+        .game {
+            padding-bottom: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            img.title {
+                width: min(700px, 90%);
+                padding-bottom: 25px;
+            }
+
+            img.thumbnail {
+                width: min(900px, 90%);
             }
         }
     }

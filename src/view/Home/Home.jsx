@@ -2,6 +2,9 @@ import React from 'react'
 import "./Home.scss"
 import Banner from './Banner'
 import mission from "./img/mission.png"
+import overview from "./img/overview.png"
+import game from "./img/game.png"
+import gameThumbnail from "./img/gameThumbnail.png"
 
 export default function Home() {
     return (
@@ -23,6 +26,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div className='overview wrapper'>
+                    <img className='title' src={overview}/>
+                </div>
+
+                <div className='game wrapper'>
+                    <img className='title' src={game}/>
+                    <img className='thumbnail' src={gameThumbnail}/>
                 </div>
             </div>
         </div>
