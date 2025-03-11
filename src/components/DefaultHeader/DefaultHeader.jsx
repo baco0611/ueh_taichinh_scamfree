@@ -32,13 +32,13 @@ export default function DefaultHeader() {
                     </li>
                     <li>
                         <Link className={clsx({
-                            active: location.pathname == "/activities"
-                        })} to="/activities">Hoạt động</Link>
+                            active: location.pathname == "/handbook"
+                        })} to="/handbook">Sổ tay phòng chống</Link>
                     </li>
                     <li>
                         <Link className={clsx({
-                            active: location.pathname == "/handbook"
-                        })} to="/handbook">Sổ tay phòng chống</Link>
+                            active: location.pathname == "/feedback"
+                        })} to="/feedback">Góp ý</Link>
                     </li>
                 </ul>
             </div>

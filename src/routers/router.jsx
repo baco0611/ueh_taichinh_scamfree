@@ -4,7 +4,6 @@ import Error from "../components/Error/Error";
 import Home from "../view/Home/Home";
 import Handbook from "../view/Handbook/Handbook";
 import Game from "../view/Game/Game";
-import Activities from "../view/Activities/Activities";
 import Feedback from "../view/Feedback/Feedback";
 
 const router = createBrowserRouter([
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
             {
                 path:"/game",
                 element: <Game/>
-            },
-            {
-                path:"/activities",
-                element: <Activities/>
             },
             {
                 path:"/handbook",
