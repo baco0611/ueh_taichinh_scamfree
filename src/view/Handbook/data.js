@@ -286,4 +286,10 @@ const contentData = [
     }
 ]
 
-export default contentData
+const tiktokVideo = {
+    
+}
+
+export  {
+    contentData
+}

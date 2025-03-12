@@ -4,7 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import title from "./img/title.png"
 import contentList from "./img/contentList.png"
-import contentData from './data';
+import signPrevent from "./img/signPrevent.png"
+import rightSign from "./img/rightSign.png"
+import onlineExample from "./img/onlineExample.png"
+import { contentData } from "./data"
 
 export default function Handbook() {
     return (
@@ -32,6 +35,49 @@ export default function Handbook() {
                         )
                     })
                 }
+                </div>
+            </div>
+
+            <div className='sign-prevent wrapper'>
+                <img className='title' src={signPrevent}/>
+                <div className='content'>
+                {
+                    contentData.map((element, index) => {
+                        return (
+                            <div key={index} className='element'>
+                                <h3>{element.content}</h3>
+
+                                <p className='sign'>Dấu hiệu nhận biết</p>
+                                <ul className='sign'>
+                                {
+                                    element.signs.map((element, index) => {
+                                        return <li key={index}>{index + 1}. {element}</li>
+                                    })
+                                }
+                                </ul>
+
+                                <p className='prevent'>
+                                    <img src={rightSign}/>
+                                    Cách phòng chống:
+                                </p>
+                                <ul className='prevent'>
+                                {
+                                    element.prevent.map((element, index) => {
+                                        return <li key={index}>- {element}</li>
+                                    })
+                                }
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
+                </div>
+            </div>
+
+            <div className='online-example wrapper'>
+                <img className='title' src={onlineExample}/>
+                <div>
+
                 </div>
             </div>
         </div>
