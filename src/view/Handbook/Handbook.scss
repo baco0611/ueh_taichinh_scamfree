@@ -206,6 +206,14 @@
             border-radius: 20px;
             color: var.$primary-color;
 
+            .contact {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Cột linh hoạt */
+                gap: 16px;
+                padding: 20px;
+                margin: 0 auto; 
+            }
+
             h3 {
                 font-family: var.$side-font;
                 padding-bottom: 20px;
@@ -213,24 +221,25 @@
             }
 
             p, li {
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 500;
                 line-height: 1.2;
+                padding-bottom: 15px;
             }
 
-            p.prevent {
-                padding-top: 30px;
-                display: flex;
-                align-items: center;
+            span {
+                font-weight: 900;
+                font-style: italic;
+            }
 
-                img {
-                    height: 20px;
-                    padding-right: 10px;
+            a {
+                color: var.$primary-color;
+                font-style: italic;
+                cursor: pointer;
+        
+                &:hover {
+                    color: black;
                 }
-            }
-
-            ul.prevent {
-                padding-left: 20px;
             }
         }
     }
