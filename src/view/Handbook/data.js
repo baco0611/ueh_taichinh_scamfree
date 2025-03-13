@@ -146,10 +146,28 @@ const contentData = [
 ]
   
 
-const tiktokVideo = {
-
-}
+const tiktokVideo = [
+    {
+        image: 1,
+        title: "Lạm dụng chức quyền",
+        url: "https://www.facebook.com/",
+        tiktokName: "Nguyễn Văn A",
+    },
+    {
+        image: 2,
+        title: "Lừa đảo làm nhiệm vụ trên mạng",
+        url: "https://www.facebook.com/",
+        tiktokName: "Huỳnh Thị B",
+    },
+    {
+        image: 3,
+        title: "Chuyển tiền rồi lừa đảo",
+        url: "https://www.facebook.com/",
+        tiktokName: "Hà Sỹ C",
+    }
+]
 
 export  {
-    contentData
+    contentData,
+    tiktokVideo
 }

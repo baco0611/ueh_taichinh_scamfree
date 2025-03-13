@@ -7,9 +7,10 @@ import contentList from "./img/contentList.png"
 import signPrevent from "./img/signPrevent.png"
 import rightSign from "./img/rightSign.png"
 import onlineExample from "./img/onlineExample.png"
-import { contentData } from "./data"
+import { contentData, tiktokVideo } from "./data"
 import ContentListElement from './ContentListElement';
 import { Link } from 'react-router-dom';
+import TiktokElement from './TiktokElement';
 
 export default function Handbook() {
     return (
@@ -108,6 +109,14 @@ export default function Handbook() {
             <div className='online-example wrapper'>
                 <img className='title' src={onlineExample}/>
                 <div className='content'>
+                {
+                    tiktokVideo.map((element, index) => {
+                        return <TiktokElement
+                            key={index}
+                            information={element}
+                        />
+                    })
+                }
                 </div>
             </div>
         </div>
