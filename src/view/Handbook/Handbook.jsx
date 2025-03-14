@@ -11,6 +11,7 @@ import { contentData, tiktokVideo } from "./data"
 import ContentListElement from './ContentListElement';
 import { Link } from 'react-router-dom';
 import TiktokElement from './TiktokElement';
+import OnlineExample from './OnlineExample';
 
 export default function Handbook() {
     return (
@@ -83,8 +84,8 @@ export default function Handbook() {
                             <div className='block'>
                                 <p><span>Cổng thông tin hỗ trợ người dùng</span></p>
                                 <ul>
-                                    <li>- Số điện thoại: 1900.888.655</li>
-                                    <li>- Website: <a target='_blank' href="https://ais.gov.vn/">https://ais.gov.vn/</a></li>
+                                    <li>- Số điện thoại: 1800.6838</li>
+                                    <li>- Website: <a target='_blank' href="https://www.bvntd.gov.vn/">https://www.bvntd.gov.vn/</a></li>
                                 </ul>
                             </div>
                             <div className='block'>
@@ -109,14 +110,15 @@ export default function Handbook() {
             <div className='online-example wrapper'>
                 <img className='title' src={onlineExample}/>
                 <div className='content'>
-                {
+                    <OnlineExample/>
+                {/* {
                     tiktokVideo.map((element, index) => {
                         return <TiktokElement
                             key={index}
                             information={element}
                         />
                     })
-                }
+                } */}
                 </div>
             </div>
         </div>
