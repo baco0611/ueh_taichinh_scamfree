@@ -9,6 +9,8 @@ import onlineExample from "./img/onlineExample.png"
 import { contentData } from "./data"
 import ContentListElement from './ContentListElement';
 import OnlineExample from './OnlineExample';
+import news from "./img/news.png"
+import News from './News';
 
 export default function Handbook() {
     return (
@@ -301,14 +303,13 @@ export default function Handbook() {
                 <img className='title' src={onlineExample}/>
                 <div className='content'>
                     <OnlineExample/>
-                {/* {
-                    tiktokVideo.map((element, index) => {
-                        return <TiktokElement
-                            key={index}
-                            information={element}
-                        />
-                    })
-                } */}
+                </div>
+            </div>
+
+            <div className='news wrapper'>
+                <img className='title' src={news}/>
+                <div className='content'>
+                    <News/>
                 </div>
             </div>
         </div>

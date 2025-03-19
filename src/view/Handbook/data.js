@@ -227,7 +227,48 @@ const tiktokVideo = [
     },
 ]
 
+const newsData = [
+    {
+        title: "HÀNG LOẠT NẠN NHÂN BỊ LỪA TIỀN TỶ",
+        details: "Hiện nay, tội phạm lừa đảo sử dụng công nghệ cao không ngừng đưa ra các chiêu trò mới để lừa đảo chiếm đoạt tài sản, nhắm tới nạn nhân là người nhẹ dạ cả tin, đặc biệt là những người có tài khoản ngân hàng… Tháng 4/2024, nhiều ngân hàng đã phát thông báo đến khách hàng về các hành vi lừa đảo qua mạng.",
+        image: 1,
+        url: "https://congan.com.vn/vu-an/phong-chong-toi-pham-tren-khong-gian-mang/bai-1-hang-loat-nan-nhan-bi-lua-tien-ty_161302.html",
+    },
+    {
+        title: "DÍNH BẪY DỊCH VỤ 'LẤY LẠI TIỀN LỪA ĐẢO', NẠN NHÂN MẤT THÊM 600 TRIỆU ĐỒNG",
+        details: "Theo Cục An toàn thông tin, bị đối tượng xấu giả danh người quen lừa vay 6 triệu đồng, một phụ nữ ở Nghệ An lên mạng nhờ 'dịch vụ lấy lại tiền lừa đảo' để lấy lại số tiền đã mất, thì bị lừa tiếp 600 triệu đồng.",
+        image: 2,
+        url: "https://cand.com.vn/Cong-nghe/dinh-bay-dich-vu-lay-lai-tien-lua-dao-nan-nhan-mat-them-600-trieu-dong-i733085/",
+    },
+    {
+        title: "GIẢ SHIPPER ĐỂ LỪA NGƯỜI MUA CHUYỂN KHOẢN",
+        details: "Đánh vào tâm lý những khách hàng mua bằng phương thức chuyển khoản, kẻ gian đã dụ nạn nhân vào bẫy bằng cách gửi nhầm số tài khoản và đã đăng kí thẻ hội viên của dịch vụ giao hàng. Khách hàng muốn hủy phải nhấp vào đường link lạ và mất số tiền lên đến hàng trăm triệu.",
+        image: 3,
+        url: "https://vnexpress.net/gia-shipper-gui-hang-o-cho-cu-de-lua-nguoi-mua-chuyen-khoan-4802599.html",
+    },
+    {
+        title: "KHỞI TỐ TIKTOKER MR PIPS VỀ HÀNH VI LỪA ĐẢO",
+        details: "Phó Đức Nam (Mr.Pips) với hàng trăm nghìn lượt theo dõi bị khởi tố và phong tỏa tài sản hơn 5000 tỷ đồng với cáo buộc cùng đồng phạm lập đường dây lừa đảo chiếm đoạt tài sản, theo mô hình của các công ty môi giới chứng khoán.",
+        image: 4,
+        url: "https://tuoitre.vn/khoi-to-tiktoker-mr-pips-ve-hanh-vi-lua-dao-phong-toa-tai-san-hon-5-000-ti-dong-2024120618354997.htm",
+    },
+    {
+        title: "NGƯỜI DÂN BỊ LỪA ĐẢO KHOẢNG 10.000 TỶ ĐỒNG TRÊN KHÔNG GIAN MẠNG",
+        details: "Thống kê về số lượng người dân bị tội phạm sử dụng công nghệ cao để lừa đảo và chiếm đoạt tiền và tài khoản của người dân ngày càng tăng, một lần nữa cho thấy cần thiết phải nâng mức cảnh báo lên cao hơn.",
+        image: 5,
+        url: "https://vneconomy.vn/nguoi-dan-bi-lua-dao-khoang-10-000-ty-dong-tren-khong-gian-mang.htm",
+    },
+    {
+        title: "BỊ LỪA GẦN 3 TỶ ĐỒNG VÌ ĐẦU TƯ TÀI CHÍNH ONLINE",
+        details: "Với quảng cáo lợi nhuận cao, anh L đã nạp gần 3 tỷ đồng để đầu tư tài chính online qua sàn Charlescoporation nhưng khi muốn rút tiền thì hệ thống báo lỗi, không rút được…",
+        image: 6,
+        url: "https://vneconomy.vn/bi-lua-gan-3-ty-dong-vi-dau-tu-tai-chinh-online.htm",
+    }
+]
+  
+
 export  {
     contentData,
-    tiktokVideo
+    tiktokVideo,
+    newsData
 }

@@ -372,4 +372,57 @@
         }
     }
 
+    .news {
+        .title {
+            margin: 0 auto;
+            width: min(80%, 500px);
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Cột linh hoạt */
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .element {
+            display: block;
+            background-color: white;
+            border-radius: 30px;
+            padding: 25px;
+
+            img {
+                aspect-ratio: 16/5;
+                object-fit: cover;
+                border-radius: 18px;
+                margin-bottom: 15px;
+            }
+
+            h3, p {
+                color: var.$primary-color;
+            }
+
+            h3 {
+                font-family: var.$side-font;
+                padding-bottom: 10px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.15;
+            }
+
+            &:hover {
+                background-color: var.$highlight-color;
+
+                h3, p {
+                    color: white;
+                }
+            }
+        }
+    }
 }
