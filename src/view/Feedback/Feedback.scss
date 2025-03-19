@@ -1,0 +1,112 @@
+#feedback {
+    background: url("./img/background.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    min-height: calc(100vh - 100px);
+
+    .title {
+        margin: 0 auto;
+        width: min(80%, 450px);
+        padding-bottom: 25px;
+    }
+
+    .container {
+        width: min(80%, 850px);
+        aspect-ratio: 16/10;
+        margin: 0 auto;
+
+        background: white;
+        border-radius: 20px;
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to right, #ff8e3a, #ff9e5c);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            div {
+                &:nth-child(1) {
+                    width: 60%;
+                    height: 15px;
+                    border-radius: 20px;
+                    background-color: white;
+                }
+
+                &:nth-child(2) svg {
+                    color: white;
+                    font-size: 35px;
+                    line-height: 50px;
+                    padding-left: 25px;
+
+                    &:nth-child(2) {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: calc(100% - 50px);
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .main {
+                width: 90%;
+                height: 78%;
+                border: #ff8e3a solid 3.5px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+
+                textarea {
+                    resize: none;
+                    overflow-y: scroll;
+                    border: none;
+    
+                    margin-top: 20px;
+                    width: calc(100% - 40px);
+                    height: calc(100% - 20px - 40px);
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: 600;
+                }
+
+                button {
+                    position: absolute;
+                    width: 270px;
+                    background: transparent;
+                    border: none;
+
+                    bottom: 0;
+                    transform: translateY(60%);
+                }
+            }
+
+            .text {
+                padding-top: 45px;
+                
+                p {
+                    color: #ff8e3a;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                }
+            }
+
+        }
+    }
+}
