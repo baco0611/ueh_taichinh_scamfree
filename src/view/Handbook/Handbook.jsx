@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Handbook.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +13,10 @@ import news from "./img/news.png"
 import News from './News';
 
 export default function Handbook() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className='page-wrapper' id='handbook-section'>
             <img className='handbook-title' src={title}/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Feedback.scss"
 import title from "./img/title.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,10 @@ import button from "./img/button.png"
 
 export default function Feedback() {
     const [ emailContent, setEmailContent ] = useState("")
-    console.log(emailContent)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className='page-wrapper' id='feedback'>

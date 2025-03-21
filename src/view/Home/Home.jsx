@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Home.scss"
 import Banner from './Banner'
 import mission from "./img/mission.png"
@@ -11,6 +11,10 @@ import feedback from "./img/feedback.png"
 import { Link } from 'react-router-dom'
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className='page-wrapper' id='home-section'>
             <Banner/>
