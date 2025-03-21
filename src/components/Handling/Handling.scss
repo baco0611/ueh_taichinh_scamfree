@@ -1,0 +1,64 @@
+@use "../../variable.scss" as var;
+
+#handling {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+        padding-top: 20px;
+        font-size: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-transform: uppercase;
+    }
+
+    .cursor {
+        display: inline-block;
+        width: 8px;
+        background: white;
+        margin-left: 4px;
+        animation: blink 0.6s infinite;
+    }
+
+    .loader {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: var.$highlight-color;
+        transform: rotateX(65deg) rotate(45deg);
+        color: #fff;
+        animation: layers1 1s linear infinite alternate;
+    }
+    .loader:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+        animation: layerTr 1s linear infinite alternate;
+    }      
+}
+
+// 🔥 Animation con trỏ nhấp nháy
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+// 🔥 Animation box
+@keyframes layers1 {
+    0% { box-shadow: 0px 0px 0 0px  }
+    90% , 100% { box-shadow: 20px 20px 0 -4px  }
+}
+@keyframes layerTr {
+    0% { transform:  translate(0, 0) scale(1) }
+    100% {  transform: translate(-25px, -25px) scale(1) }
+}
