@@ -11,6 +11,8 @@ import ContentListElement from './ContentListElement';
 import OnlineExample from './OnlineExample';
 import news from "./img/news.png"
 import News from './News';
+import feedback from "../Home/img/feedback.png"
+import { Link } from 'react-router-dom';
 
 export default function Handbook() {
     useEffect(() => {
@@ -315,6 +317,11 @@ export default function Handbook() {
                 <div className='content'>
                     <News/>
                 </div>
+            </div>
+            <div className='feedback'>
+                <Link to="/feedback">
+                    <img src={feedback}/>
+                </Link>
             </div>
         </div>
     )

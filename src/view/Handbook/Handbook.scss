@@ -440,4 +440,19 @@
             }
         }
     }
+
+    .feedback {
+        padding-top: 30px;
+
+        position: relative;
+
+        a {
+            position: absolute;
+            right: 5vw;
+
+            img {
+                height: 55px;
+            }
+        }
+    }
 }
