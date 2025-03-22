@@ -25,8 +25,6 @@ export default function OnlineExample() {
     useEffect(() => {
         const heights = slideRefs.current.map(el => el?.offsetHeight || 0);
         setMaxHeight(Math.max(...heights));
-
-        console.log(heights, Math.max(...heights))
     }, [tiktokVideo]);
 
     return (
