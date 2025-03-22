@@ -42,7 +42,9 @@ export default function Home() {
 
                 <div className='game wrapper'>
                     <img className='title' src={game}/>
-                    <img className='thumbnail' src={gameThumbnail}/>
+                    <Link to="/game">
+                        <img className='thumbnail' src={gameThumbnail}/>
+                    </Link>
                 </div>
 
                 <div className='checklist wrapper'>
@@ -52,25 +54,31 @@ export default function Home() {
                             <div>
                                 <img src={checklistButton}/>
                             </div>
-                            <div>
-                                <p>Một số hình thức lừa đảo phổ biến</p>
-                            </div>
+                            <Link to="/handbook">
+                                <div>
+                                    <p>Một số hình thức lừa đảo phổ biến</p>
+                                </div>
+                            </Link>
                         </div>
                         <div className='element'>
                             <div>
                                 <img src={checklistButton}/>
                             </div>
-                            <div>
-                                <p>Cách nhận biết và <br/> phòng chống lừa đảo</p>
-                            </div>
+                            <Link to="/handbook">
+                                <div>
+                                    <p>Cách nhận biết và <br/> phòng chống lừa đảo</p>
+                                </div>
+                            </Link>
                         </div>
                         <div className='element'>
                             <div>
                                 <img src={checklistButton}/>
                             </div>
-                            <div>
-                                <p>Một số bài báo</p>
-                            </div>
+                            <Link to="/handbook">
+                                <div>
+                                    <p>Một số bài báo</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

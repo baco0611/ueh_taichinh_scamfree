@@ -12,26 +12,27 @@
     background-size: cover;
     // background-position-y: calc(-450px);
     background-repeat: no-repeat;
+    
     .container {
         padding: 75px 0;
 
         .mission {
-            padding-bottom: 45px;
+            padding-bottom: 65px;
 
             .header {
-                height: 110px;
+                height: 75px;
                 margin: 0 auto;
-                padding-bottom: 15px;
+                margin-bottom: 10px;
             }
 
             .content {
-                width: max(65%, 600px);
+                width: max(75%, 600px);
                 margin: 0 auto;
                 padding: 40px;
                 border-radius: 20px;
                 position: relative;
                 text-align: justify;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 1.6;
                 background: white;
                 border: rgb(254, 121, 33) solid 3px;
@@ -45,7 +46,7 @@
                 p {
                     color: var.$primary-color;
                     font-weight: 500;
-                    font-size: 25px;
+                    font-size: 20px;
                     padding-bottom: 25px;
                 }
 
@@ -77,7 +78,7 @@
 
             img.title {
                 margin: 0 auto;
-                width: min(900px, 90%);
+                width: min(800px, 90%);
             }
         }
 
@@ -88,12 +89,18 @@
             flex-direction: column;
 
             img.title {
-                width: min(700px, 90%);
-                padding-bottom: 25px;
+                width: min(650px, 90%);
+                padding-bottom: 15px;
+            }
+
+            a {
+                display: block;
+                margin: 0 auto;
+                width: min(900px, 90%);
             }
 
             img.thumbnail {
-                width: min(900px, 90%);
+                width: 100%;
             }
         }
 
@@ -103,7 +110,7 @@
             flex-direction: column;
 
             img.title {
-                width: min(545px, 90%);
+                width: min(450px, 80%);
                 padding-bottom: 35px;
             }
 
@@ -119,51 +126,57 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                gap: 20px;
 
                 div:nth-child(1) {
-                    // width: 13%;
                     img {
-                        height: 120px;
+                        height: 100px;
                     }
                 }
 
-                div:nth-child(2) {
+                a {
+                    display: block;
                     width: 82%;
-                    height: 110px;
-                    background: white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    border-radius: 40px;
-                    border: solid rgb(254, 121, 33) 3.5px;
-
-                    position: relative;
-                    z-index: 1;
-                    padding: 5px;
-                    &::before {
-                        content: '';
-
-                        position: absolute;
-                        z-index: 2;
-                        top: 2px;
-                        bottom: 2px;
-                        left: 2px;
-                        right: 2px;
-
-                        background-color: transparent;
-                        border-radius: 35px;
-                        border: solid rgb(254, 121, 33) 2px;
-                    }
-
-                    p {
-                        font-family: var.$side-font;
-                        color: var.$primary-color;
-                        font-size: 28px;
-                        text-align: center;
+                    height: 100px;
+                    div {
+                        width: 100%;
+                        height: 100px;
+                        background: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        border-radius: 40px;
+                        border: solid rgb(254, 121, 33) 3.5px;
+    
+                        position: relative;
+                        z-index: 1;
+                        padding: 5px;
+                        &::before {
+                            content: '';
+    
+                            position: absolute;
+                            z-index: 2;
+                            top: 2px;
+                            bottom: 2px;
+                            left: 2px;
+                            right: 2px;
+    
+                            background-color: transparent;
+                            border-radius: 35px;
+                            border: solid rgb(254, 121, 33) 2px;
+                        }
+    
+                        p {
+                            font-family: var.$side-font;
+                            color: var.$primary-color;
+                            font-size: 25px;
+                            text-align: center;
+                        }
                     }
                 }
+
             }
         }
 
