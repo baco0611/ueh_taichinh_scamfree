@@ -139,6 +139,7 @@
                     display: block;
                     width: 82%;
                     height: 100px;
+
                     div {
                         width: 100%;
                         height: 100px;
@@ -173,6 +174,21 @@
                             color: var.$primary-color;
                             font-size: 25px;
                             text-align: center;
+                        }
+                    }
+
+                    &:hover {
+                        div {
+                            background: rgb(254, 121, 33);
+                            border: solid white 3.5px;
+                            
+                            &:before {
+                                border: solid white 2px;
+                            }
+                        }
+
+                        p {
+                            color: white;
                         }
                     }
                 }
