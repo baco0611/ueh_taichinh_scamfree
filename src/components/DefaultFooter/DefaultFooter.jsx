@@ -25,6 +25,9 @@ export default function DefaultFooter() {
                     <a href='tel:+84905110074'>Mai Xuân Quỳnh - 0905 110 074</a>
                 </p>    
             </div>
+            <div className='info-box'>
+                <h2>&copy; Copyright 2025 | Huỳnh Văn Nguyên Bảo</h2>
+            </div>
         </div>
     )
 }

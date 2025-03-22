@@ -28,7 +28,7 @@ export default function DefaultHeader() {
                     <li>
                         <Link className={clsx({
                             active: location.pathname == "/game"
-                        })} to="/game">Game</Link>
+                        })} to="/game">Trò chơi</Link>
                     </li>
                     <li>
                         <Link className={clsx({
