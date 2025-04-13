@@ -1,5 +1,5 @@
 .game-home {
-    background: url("./img/Background.png");
+    background: url("../asset/Background.png");
     background-size: cover;
     min-height: 100vh !important;
 
@@ -23,8 +23,10 @@
             opacity: 0.8;
         }
     }
+}
 
-    button {
+.game {
+    button.audio {
         position: absolute;
         background-color: transparent;
         border: none;
@@ -32,9 +34,5 @@
 
         top: 5%;
         right: 5%;
-
-        &.disable {
-            
-        }
     }
 }

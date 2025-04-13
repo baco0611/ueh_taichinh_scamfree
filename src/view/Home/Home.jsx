@@ -14,9 +14,9 @@ import scan from "./img/overview/scan.png"
 import scam from "./img/overview/scam.png"
 
 export default function Home() {
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className='page-wrapper' id='home-section'>

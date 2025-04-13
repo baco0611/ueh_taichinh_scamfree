@@ -77,7 +77,7 @@ export default function DefaultHeader() {
                                 <Link 
                                     onClick={() => setIsHidden(true)}
                                     className={clsx({
-                                        active: location.pathname == "/game"
+                                        active: location.pathname.startsWith("/game")
                                     })} to="/game"
                                 >Game</Link>
                             </li>

@@ -1,0 +1,54 @@
+.game-intro {
+    background: url("../asset/Background.png");
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: relative;
+
+    .surface {
+        width: min(475px, 85%);
+        margin-bottom: 35px;
+    }
+
+    .information-block {
+        padding: 20px 0;
+        .block {
+            width: min(750px, 70vw);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 15px;
+
+            min-height: 50px;
+            p, input {
+                color: white;
+                font-weight: 700;
+                font-size: 28px;
+            }
+
+            input {
+                width: 70%;
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid white;
+            }
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+
+        img {
+            width: 250px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
