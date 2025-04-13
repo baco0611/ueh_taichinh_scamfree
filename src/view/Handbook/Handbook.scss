@@ -186,7 +186,104 @@
         }
     }
 
-    .sign-prevent {
+
+    .main-content {
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 35px;
+
+        .sub-content {
+            width: min(95%, 1200px);
+
+            .title {
+                width: min(85%, 900px);
+                margin: 0 auto;
+            }
+
+            .mySwiper {
+                width: 100%;
+                .swiper-button-next:after, .swiper-button-prev:after {
+                    color: var.$primary-color;
+                    font-size: 30px;
+                }
+    
+                .swiper-pagination-bullet-active {
+                    background: var.$primary-color;
+                }
+
+                .element {
+                    margin: 0 auto;
+                }
+            }
+
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            flex-direction: column;
+
+            p, li {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.2;
+                padding-bottom: 10px;
+                text-align: justify;
+                color: var.$primary-color;
+            }
+
+            ul.sub-element {
+                li {
+                    padding-left: 30px;
+                }
+            }
+
+            span {
+                font-weight: 900;
+                font-style: italic;
+            }
+
+            span.underline {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+
+            a {
+                color: var.$primary-color;
+                font-style: italic;
+                text-decoration: underline;
+                font-weight: 700;
+                cursor: pointer;
+        
+                &:hover {
+                    // color: black;
+                    color: var.$highlight-color;
+                }
+            }
+        }
+
+        .element {
+            width: min(90%, 1100px);
+            background-color: white;
+            padding: 20px 35px;
+            border-radius: 20px;
+            color: var.$primary-color;
+        
+            &.contact {
+                display: grid;
+                grid-template-columns: 47% 47%; /* Cột linh hoạt */
+                column-gap: 6%;
+                margin: 0 auto; 
+
+                li, p {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }    
+
+    .main-content-a {
         padding-top: 25px;
         .title {
             width: min(85%, 900px);
@@ -454,5 +551,11 @@
                 height: 55px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #handbook-section .main-content .element.contact {
+        grid-template-columns: 100%;
     }
 }
