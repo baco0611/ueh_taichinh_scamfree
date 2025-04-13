@@ -1,0 +1,40 @@
+.game-home {
+    background: url("./img/Background.png");
+    background-size: cover;
+    min-height: 100vh !important;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: relative;
+
+    .surface {
+        width: min(675px, 85%);
+        margin-bottom: 35px;
+    }
+
+    a {
+        img {
+            width: 250px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    button {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        width: 60px;
+
+        top: 5%;
+        right: 5%;
+
+        &.disable {
+            
+        }
+    }
+}

@@ -3,8 +3,9 @@ import Default from "../components/Default/Default";
 import Error from "../components/Error/Error";
 import Home from "../view/Home/Home";
 import Handbook from "../view/Handbook/Handbook";
-import Game from "../view/Game/Game";
 import Feedback from "../view/Feedback/Feedback";
+import GameHome from "../view/Game/GameHome/GameHome";
+import GameLayout from "../components/GameLayout/GameLayout";
 
 const router = createBrowserRouter([
     {
@@ -16,17 +17,26 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path:"/game",
-                element: <Game/>
-            },
-            {
                 path:"/handbook",
                 element: <Handbook/>
             },
             {
                 path:"/feedback",
                 element: <Feedback/>
-            }
+            },
+            {
+                path: "/game",
+                element: <GameLayout/>,
+                children: [
+                    {
+                        path: "/game",
+                        element: <GameHome/>
+                    },
+                    {
+        
+                    }
+                ]
+            },
         ]
     },
     {
