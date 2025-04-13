@@ -7,14 +7,21 @@ export default function Default() {
     const APP_SCRIPT_URL = import.meta.env.VITE_APP_SCRIPT_URL
 
     useEffect(() => {
-        const form = new FormData();
-        form.append("action", "traffic");
-        form.append("sheet", "TRAFFIC");
-      
-        fetch(APP_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          body: form,
+        const now = new Date();
+        const time = now.toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" });
+
+        const data = {
+            action: "create",
+            sheet: "TRAFFIC",
+            data: JSON.stringify([time])
+        };
+        const res = fetch(APP_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(data)
         });
       }, []);
 
