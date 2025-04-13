@@ -1,6 +1,7 @@
 import axios from "axios";
 import Swal from "sweetalert2"
 import { postData } from "../../utils/apiClient";
+import { postToSheet } from "../../utils/appScriptClient";
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
@@ -41,8 +42,13 @@ const onSubmit = async ({ e, content, setIsLoading, onReload }) => {
         const databaseData = {
             action: "create",
             sheet: "FEEDBACK",
-            data: JSON.stringify([time, content]) // Không cần gửi time
+            data: JSON.stringify([content]) // Không cần gửi time
         };
+
+        const form = new FormData();
+        form.append("action", "create");
+        form.append("sheet", "FEEDBACK");
+        form.append("data", JSON.stringify([content]));
 
         setIsLoading(true)
 
@@ -53,27 +59,35 @@ const onSubmit = async ({ e, content, setIsLoading, onReload }) => {
                 throw new Error("Gửi email thất bại");
             }
 
+            // const response = await fetch(APP_SCRIPT_URL, {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/x-www-form-urlencoded"
+            //     },
+            //     body: new URLSearchParams(databaseData)
+            // });
             const response = await fetch(APP_SCRIPT_URL, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: new URLSearchParams(databaseData)
-            });
+                mode: "no-cors",
+                body: new URLSearchParams(databaseData),
+              });
 
-            const databaseUpdate = await response.json()
-            console.log(databaseUpdate)
+            // const databaseUpdate = await response.json()
+            // console.log(databaseUpdate)
 
-            if (databaseUpdate.status === "success") {
-                Swal.fire({
-                    title: "GÓP Ý THÀNH CÔNG",
-                    text: "Cảm ơn bạn đã góp ý. Chúng mình trân trọng ý kiến đóng góp của bạn!",
-                    icon: "success"
-                });
-            } else {
-                throw new Error("Lưu vào Google Sheets thất bại");
-            }
+            // console.log(databaseUpdate)
+
+            // if (databaseUpdate.status === "success") {
+            //     Swal.fire({
+            //         title: "GÓP Ý THÀNH CÔNG",
+            //         text: "Cảm ơn bạn đã góp ý. Chúng mình trân trọng ý kiến đóng góp của bạn!",
+            //         icon: "success"
+            //     });
+            // } else {
+            //     throw new Error("Lưu vào Google Sheets thất bại");
+            // }
             onReload()
+
 
         } catch (error) {
             Swal.fire({
