@@ -6,20 +6,16 @@ import DefaultFooter from '../DefaultFooter/DefaultFooter'
 export default function Default() {
     const APP_SCRIPT_URL = import.meta.env.VITE_APP_SCRIPT_URL
 
-      useEffect(() => {
-        const data = {
-            action: "traffic",
-            sheet: "TRAFFIC",
-        }
+    useEffect(() => {
+        const form = new FormData();
+        form.append("action", "traffic");
+        form.append("sheet", "TRAFFIC");
       
         fetch(APP_SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            // headers: {
-            //     "Content-Type": "application/x-www-form-urlencoded"
-            // },
-            body: new URLSearchParams(data),
-        })
+          method: "POST",
+          mode: "no-cors",
+          body: form,
+        });
       }, []);
 
     return (
