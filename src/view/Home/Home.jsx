@@ -9,11 +9,14 @@ import checklist from "./img/checklist.png"
 import checklistButton from "./img/checklistButton.png"
 import feedback from "./img/feedback.png"
 import { Link } from 'react-router-dom'
+import scar from "./img/overview/scar.png"
+import scan from "./img/overview/scan.png"
+import scam from "./img/overview/scam.png"
 
 export default function Home() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return (
         <div className='page-wrapper' id='home-section'>
@@ -38,6 +41,29 @@ export default function Home() {
                 
                 <div className='overview wrapper'>
                     <img className='title' src={overview}/>
+                    <div className='content'>
+                        <div className='element'>
+                            <img src={scar}/>
+                            <div>
+                                <p>Chuỗi truyền thông online giới thiệu các nội dung về Lừa đảo Tài chính, giới thiệu Sổ tay phòng chống lừa đảo tài chính: “SCAR”</p>
+                            </div>
+                            <h3>31/03 - 14/04/2025</h3>
+                        </div>
+                        <div className='element'>
+                            <img src={scan}/>
+                            <div>
+                                <p>Ngày hội phòng chống lừa đảo tài chính</p>
+                            </div>
+                            <h3>15 - 16/04/2025</h3>
+                        </div>
+                        <div className='element' style={{gridColumn: "1/3"}}>
+                            <img src={scam}/>
+                            <div>
+                                <p>Talkshow Nhận diện lừa đảo tài chính <br/> B1.302, Đại học Kinh tế TP. Hồ Chí Minh</p>
+                            </div>
+                            <h3>21/04/2025</h3>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='game wrapper'>
