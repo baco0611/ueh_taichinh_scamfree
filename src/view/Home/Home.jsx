@@ -52,31 +52,88 @@ export default function Home() {
                     <div className='content'>
                         <div className='element'>
                             <div>
-                                <img src={checklistButton}/>
+                                <img src={checklistButton} />
                             </div>
-                            <Link to="/handbook">
+                            <Link to="/handbook#common-form">
                                 <div>
                                     <p>Một số hình thức lừa đảo phổ biến</p>
                                 </div>
                             </Link>
                         </div>
+
                         <div className='element'>
                             <div>
-                                <img src={checklistButton}/>
+                                <img src={checklistButton} />
                             </div>
-                            <Link to="/handbook">
+                            <Link to="/handbook#object">
                                 <div>
-                                    <p>Cách nhận biết và <br/> phòng chống lừa đảo</p>
+                                    <p>Đối tượng mục tiêu trong<br/>các vụ lừa đảo</p>
                                 </div>
                             </Link>
                         </div>
+
                         <div className='element'>
                             <div>
-                                <img src={checklistButton}/>
+                                <img src={checklistButton} />
                             </div>
-                            <Link to="/handbook">
+                            <Link to="/handbook#principle">
                                 <div>
-                                    <p>Một số bài báo</p>
+                                    <p>Nguyên tắc an toàn<br/>trước các hình thức lừa đảo</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton} />
+                            </div>
+                            <Link to="/handbook#trouble-shooting">
+                                <div>
+                                    <p>Hướng dẫn xử lý khi<br/>bị lừa đảo tài chính</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton} />
+                            </div>
+                            <Link to="/handbook#report">
+                                <div>
+                                    <p>Báo cáo lừa đảo đến<br/>ngân hàng & cơ quan chức năng</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton} />
+                            </div>
+                            <Link to="/handbook#contact">
+                                <div>
+                                    <p>Cơ quan & tổ chức hỗ trợ</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton} />
+                            </div>
+                            <Link to="/handbook#law">
+                                <div>
+                                    <p>Luật pháp & quy định</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className='element'>
+                            <div>
+                                <img src={checklistButton} />
+                            </div>
+                            <Link to="/handbook#tool">
+                                <div>
+                                    <p>Công nghệ chống<br/>lừa đảo tài chính</p>
                                 </div>
                             </Link>
                         </div>

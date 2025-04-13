@@ -8,7 +8,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 export default function SafetyPrinciple() {
     return (
-        <div className='sub-content'>
+        <div id='principle' className='sub-content'>
             <img className='title' src={title}/>
             <Swiper
                 slidesPerView={1}

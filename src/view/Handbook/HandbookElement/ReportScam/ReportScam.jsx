@@ -3,7 +3,7 @@ import title from "./title.png"
 
 export default function ReportScam() {
     return (
-        <div className='sub-content'>
+        <div id='report' className='sub-content'>
             <img className='title' src={title}/>
 
             <div className='element'>

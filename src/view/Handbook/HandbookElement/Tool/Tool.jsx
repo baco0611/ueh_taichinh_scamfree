@@ -8,7 +8,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 export default function Tool() {
     return (
-        <div className='sub-content'>
+        <div id='tool' className='sub-content'>
             <img className='title' src={title}/>
 
             <Swiper
