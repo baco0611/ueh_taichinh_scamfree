@@ -3,7 +3,7 @@ import title from "./title.png"
 
 export default function Contact() {
     return (
-        <div className='sub-content'>
+        <div id='contact' className='sub-content'>
             <img className='title' src={title}/>
 
             <div className='element contact'>

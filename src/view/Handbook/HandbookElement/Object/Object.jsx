@@ -3,7 +3,7 @@ import title from "./title.png"
 
 export default function Object() {
     return (
-        <div className='sub-content'>
+        <div id='object' className='sub-content'>
             <img className='title' src={title}/>
 
             <div className='element'>

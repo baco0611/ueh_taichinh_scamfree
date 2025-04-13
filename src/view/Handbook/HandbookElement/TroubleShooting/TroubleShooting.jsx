@@ -8,7 +8,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 export default function TroubleShooting() {
     return (
-        <div className='sub-content'>
+        <div id='trouble-shooting' className='sub-content'>
             <img className='title' src={title}/>
 
             <Swiper
