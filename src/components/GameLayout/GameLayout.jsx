@@ -42,23 +42,23 @@ export default function GameLayout() {
     useEffect(() => {
         sessionStorage.setItem("round", JSON.stringify({
             round1: {
-                status: true,
+                status: false,
                 score: 0
             },
             round2: {
-                status: true,
+                status: false,
                 score: 0
             },
             round3: {
-                status: true,
+                status: false,
                 score: 0
             },
             round4: {
-                status: true,
+                status: false,
                 score: 0
             },
             round5: {
-                status: true,
+                status: false,
                 score: 0
             }
         }))

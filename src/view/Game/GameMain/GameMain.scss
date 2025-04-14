@@ -88,5 +88,192 @@
                 }
             }
         }
+
+        &-situation {
+            width: min(90%, 950px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img.title {
+                height: 90px;
+                transform: translateY(-30px);
+            }
+
+            .question {
+                width: 100%;
+                background-color: #f6dde6;
+                border-radius: 40px;
+                padding: 35px;
+                color: var.$primary-color;
+
+                h1 {
+                    font-size: 28px;
+                    padding-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                    color: inherit;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    text-align: justify;
+
+                    &.ques {
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .answer {
+                padding-top: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 45px;
+                width: 100%;
+
+                button {
+                    width: min(400px, 47%);
+                    height: 50px;
+                    background: #f1f0d0;
+                    color: #bf5630;
+                    border: solid 3px white;
+                    border-radius: 50px;
+                    font-size: 26px;
+
+                    &:hover {
+                        background-color: #bf5630;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        &-short {
+            width: min(90%, 950px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+
+            .question {
+                width: 100%;
+                background-color: #f6dde6;
+                border-radius: 40px;
+                padding: 35px;
+                color: var.$primary-color;
+
+                h1 {
+                    font-size: 28px;
+                    padding-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                    color: inherit;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    text-align: justify;
+
+                    &.ques {
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .answer {
+                padding-top: 25px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input {
+                    width: 85%;
+                    height: 85px;
+                    background: #f1f0d0;
+                    color: #bf5630;
+                    border: solid 3px white;
+                    border-radius: 20px;
+                    font-size: 18px;
+                    padding: 15px;
+                }
+                
+                button {
+                    width: 13%;
+                    height: 85px;
+                    background: #f1f0d0;
+                    color: #bf5630;
+                    border: solid 3px white;
+                    border-radius: 20px;
+                    font-size: 26px;
+
+                    &:hover {
+                        background-color: #bf5630;
+                        color: white;
+                    }
+                }
+            }
+        }
     }
+}
+
+
+.swal-title-custom-true {
+    color: #2e7d32 !important; // Màu chữ tiêu đề
+    font-size: 28px;
+    font-weight: bold;
+    font-family: var.$primary-font;
+}
+
+.swal-text-custom-true {
+    color: #2e7d32;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.swal-button-custom-true {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 8px 20px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    border: none !important;
+}
+
+.swal-title-custom {
+    color: #f44336 !important; // Màu chữ tiêu đề
+    font-size: 28px;
+    font-weight: bold;
+    font-family: var.$primary-font;
+}
+
+.swal-text-custom {
+    color: #f44336;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.swal-button-custom {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 8px 20px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    border: none !important;
 }

@@ -6,7 +6,31 @@ import GameRound from './GameRound';
 export default function GameMain() {
     const navigate = useNavigate()
     const { id } = useParams();
-    const [currentRoundIndex, setCurrentRoundIndex] = useState(id);
+
+    useEffect(() => {
+        sessionStorage.setItem("round", JSON.stringify({
+            round1: {
+                status: false,
+                score: 0
+            },
+            round2: {
+                status: false,
+                score: 0
+            },
+            round3: {
+                status: false,
+                score: 0
+            },
+            round4: {
+                status: false,
+                score: 0
+            },
+            round5: {
+                status: false,
+                score: 0
+            }
+        }))
+    }, [])
 
     useEffect(() => {
         const roundId = parseInt(id)
