@@ -1,6 +1,5 @@
 const gameData = {
     round1: [
-
         {
             id: 1,
             type: "situation",
@@ -92,12 +91,12 @@ const gameData = {
             data_type: ["An toàn", "Không an toàn"],
             choice: [
                 {
-                    content: `Website có chứng chỉ bảo mật 'https'`,
-                    answer: true,
-                },
-                {
                     content: `Yêu cầu cung cấp mã OTP qua link lạ`,
                     answer: false,
+                },
+                {
+                    content: `Website có chứng chỉ bảo mật 'https'`,
+                    answer: true,
                 },
                 {
                     content: `Giao dịch chỉ qua app chính thức của ngân hàng`,
@@ -119,12 +118,12 @@ const gameData = {
                     answer: true,
                 },
                 {
-                    content: "Lợi nhuận từ hoạt động kinh doanh thực tế",
-                    answer: false,
-                },
-                {
                     content: "Tuyển người mới để nhận hoa hồng",
                     answer: true,
+                },
+                {
+                    content: "Lợi nhuận từ hoạt động kinh doanh thực tế",
+                    answer: false,
                 },
                 {
                     content: "Công khai báo cáo tài chính kiểm toán",
@@ -221,12 +220,12 @@ const gameData = {
                     answer: false,
                 },
                 {
-                    content: "contact@lazada.vn",
-                    answer: true,
-                },
-                {
                     content: "xacnhan@bank-support.com",
                     answer: false,
+                },
+                {
+                    content: "contact@lazada.vn",
+                    answer: true,
                 },
             ],
         },
@@ -261,6 +260,10 @@ const gameData = {
             data_type: ["Link an toàn", "Link nguy hiểm"],
             choice: [
                 {
+                    content: "http://shopee-voucher-gift.vip",
+                    answer: false,
+                },
+                {
                     content: "https://www.vietcombank.com.vn",
                     answer: true,
                 },
@@ -271,10 +274,6 @@ const gameData = {
                 {
                     content: "https://www.lazada.vn",
                     answer: true,
-                },
-                {
-                    content: "http://shopee-voucher-gift.vip",
-                    answer: false,
                 },
             ],
         },

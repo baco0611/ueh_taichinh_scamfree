@@ -45,7 +45,7 @@ export default function GameShort({ data, setCurrentQIndex, roundKey }) {
                     confirmButtonText: "Vòng tiếp theo →",
                     customClass: {
                         title: 'swal-title-custom-true',
-                        htmlContainer: 'swal-text-custom-true',
+                        htmlContainer: 'swal-text-custom-true swal-center',
                         confirmButton: "swal-button-custom-true"
                     }
                 }).then(() => {

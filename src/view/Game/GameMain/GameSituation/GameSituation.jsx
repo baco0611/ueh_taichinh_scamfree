@@ -43,7 +43,7 @@ export default function GameSituation({ data, setCurrentQIndex, roundKey }) {
                     confirmButtonText: "Vòng tiếp theo →",
                     customClass: {
                         title: 'swal-title-custom-true',
-                        htmlContainer: 'swal-text-custom-true',
+                        htmlContainer: 'swal-text-custom-true swal-center',
                         confirmButton: "swal-button-custom-true"
                     }
                 }).then(() => {
@@ -112,8 +112,8 @@ export default function GameSituation({ data, setCurrentQIndex, roundKey }) {
                 <p className='ques'>Đây là lừa đảo hay an toàn?</p>
             </div>
             <div className='answer'>
-                <button onDoubleClick={() => checkAnswer(true)}>An toàn</button>
-                <button className='scam' onDoubleClick={() => checkAnswer(false)}>Lừa đảo</button>
+                <button onClick={() => checkAnswer(true)}>An toàn</button>
+                <button className='scam' onClick={() => checkAnswer(false)}>Lừa đảo</button>
             </div>
         </div>
     )
