@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
-export default function GameShort({ data, setCurrentQIndex, roundKey }) {
+export default function GameShort({ data, setCurrentQIndex, roundKey, setTotal, setScores }) {
     const [ answerValue, setAnswerValue ] = useState("")
 
     const navigate = useNavigate()
@@ -21,6 +21,8 @@ export default function GameShort({ data, setCurrentQIndex, roundKey }) {
     
         if (check) {
             parsed[roundKey].score += 1
+            setTotal(prev => prev + 1)
+            setScores(prev => prev + 1)
         }
     
         const isLastQuestion = data.id % 10 === 0
@@ -103,6 +105,8 @@ export default function GameShort({ data, setCurrentQIndex, roundKey }) {
             })
             .then(() => handleContinue(true))
         } else {
+            const audio = new Audio('/wrong.mp3');
+            audio.play();
             Swal.fire({
                 title: "Sai mất rồi",
                 icon: "error",
@@ -110,7 +114,7 @@ export default function GameShort({ data, setCurrentQIndex, roundKey }) {
                 confirmButtonText: "Tiếp tục",
                 customClass: {
                     title: 'swal-title-custom',
-                    htmlContainer: 'swal-text-custom',
+                    htmlContainer: 'swal-text-custom swal-center',
                     confirmButton: "swal-button-custom"
                 }
             })

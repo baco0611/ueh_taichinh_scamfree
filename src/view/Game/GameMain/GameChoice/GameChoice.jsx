@@ -5,7 +5,7 @@ import blank from "../img/blank.png"
 import Swal from 'sweetalert2'
 import { useNavigate, useParams } from 'react-router-dom'
 
-export default function GameChoice({ data, setCurrentQIndex, roundKey }) {
+export default function GameChoice({ data, setCurrentQIndex, roundKey, setTotal, setScores }) {
     const [ answerData, setAnswerData ] = useState([null, null, null, null])
 
     const navigate = useNavigate()
@@ -32,6 +32,8 @@ export default function GameChoice({ data, setCurrentQIndex, roundKey }) {
     
         if (check) {
             parsed[roundKey].score += 1
+            setTotal(prev => prev + 1)
+            setScores(prev => prev + 1)
         }
     
         const isLastQuestion = data.id % 10 === 0
@@ -70,7 +72,7 @@ export default function GameChoice({ data, setCurrentQIndex, roundKey }) {
                     confirmButtonText: "Quay về trang chính",
                     customClass: {
                         title: 'swal-title-custom',
-                        htmlContainer: 'swal-text-custom',
+                        htmlContainer: 'swal-text-custom swal-center',
                         confirmButton: "swal-button-custom"
                     }
                 }).then(() => {
@@ -101,7 +103,10 @@ export default function GameChoice({ data, setCurrentQIndex, roundKey }) {
                 }
             })
             .then(() => handleContinue(true))
-        else 
+        else {
+            const audio = new Audio('/wrong.mp3');
+            audio.play();
+
             Swal.fire({
                 title: "Sai mất rồi",
                 icon: "error",
@@ -114,6 +119,7 @@ export default function GameChoice({ data, setCurrentQIndex, roundKey }) {
                 }
             })
             .then(() => handleContinue(false))
+        }
     }
 
     return (
