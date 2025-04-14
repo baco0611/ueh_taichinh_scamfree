@@ -360,7 +360,7 @@ const gameData = {
         },
         {
             id: 26,
-            type: "situation",
+            type: "short",
             title: "Momo",
             datum: `Ví điện tử MoMo thông báo Quý khách trúng lì xì 888.000 VNĐ. Để nhận quà, vui lòng đăng nhập tài khoản tại https://momo-event-bonus.com và xác minh thông tin.`,
             answer: ["https://momo-event-bonus.com"],

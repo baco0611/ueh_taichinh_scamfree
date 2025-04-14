@@ -44,6 +44,10 @@ export default function GameMain() {
     }, [])
 
     useEffect(() => {
+        sessionStorage.setItem("total", total)
+    }, [total])
+
+    useEffect(() => {
         const roundId = parseInt(id)
         if(!sessionStorage.getItem("userInfo")) {
             navigate("/game")

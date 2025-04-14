@@ -63,9 +63,9 @@ export default function GameLayout() {
             }
         }))
 
-        // return () => {
-        //   sessionStorage.removeItem("userInfo"); // ✅ Xóa khi rời khỏi layout
-        // };
+        return () => {
+          sessionStorage.removeItem("userInfo"); // ✅ Xóa khi rời khỏi layout
+        };
     }, []);
     
     return (

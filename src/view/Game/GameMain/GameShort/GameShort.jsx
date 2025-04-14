@@ -10,7 +10,7 @@ export default function GameShort({ data, setCurrentQIndex, roundKey, setTotal, 
 
     useEffect(() => {
         setAnswerValue("")
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
     }, [data])
 
     const handleContinue = (check) => {
@@ -51,7 +51,10 @@ export default function GameShort({ data, setCurrentQIndex, roundKey, setTotal, 
                         confirmButton: "swal-button-custom-true"
                     }
                 }).then(() => {
-                    navigate(`/game/main/${parseInt(id) + 1}`)
+                    if(id == 5)
+                        navigate("/game/legend")
+                    else
+                        navigate(`/game/main/${parseInt(id) + 1}`)
                 })
             } else {
                 Swal.fire({

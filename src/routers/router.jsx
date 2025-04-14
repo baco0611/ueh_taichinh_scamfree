@@ -10,6 +10,8 @@ import GameIntro from "../view/Game/GameIntro/GameIntro";
 import GameTutorial from "../view/Game/GameTutorial/GameTutorial";
 import GamePlay from "../view/Game/GamePlay/GamePlay";
 import GameMain from "../view/Game/GameMain/GameMain";
+import GameLegend from "../view/Game/GameLegend/GameLegend";
+import GameEnd from "../view/Game/GameEnd/GameEnd";
 
 const router = createBrowserRouter([
     {
@@ -55,7 +57,15 @@ const router = createBrowserRouter([
                     {
                         path: "main/:id",
                         element: <GameMain/>
-                    }
+                    },
+                    {
+                        path: "legend",
+                        element: <GameLegend/>
+                    },
+                    {
+                        path: "end",
+                        element: <GameEnd/>
+                    },
                 ]
             },
         ]

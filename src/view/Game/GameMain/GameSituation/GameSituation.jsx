@@ -8,7 +8,7 @@ export default function GameSituation({ data, setCurrentQIndex, roundKey, setTot
     const { id } = useParams()
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
     }, [data])
 
     const handleContinue = (check) => {
@@ -49,7 +49,10 @@ export default function GameSituation({ data, setCurrentQIndex, roundKey, setTot
                         confirmButton: "swal-button-custom-true"
                     }
                 }).then(() => {
-                    navigate(`/game/main/${parseInt(id) + 1}`)
+                    if(id == 5)
+                        navigate("/game/legend")
+                    else
+                        navigate(`/game/main/${parseInt(id) + 1}`)
                 })
             } else {
                 Swal.fire({
