@@ -1,0 +1,47 @@
+@use "../../../variable.scss" as var;
+
+.game-tutorial {
+    min-height: 100vh !important;
+    position: relative;
+    background: url("../asset/Background.png");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .tutorial-content {
+        margin-top: 50px;
+        width: min(850px, 90%);
+        color: var.$primary-color;
+        padding: 30px;
+        background-color: white;
+        border-radius: 35px;
+
+        p {
+            line-height: 1.2;
+            padding-bottom: 15px;
+            font-weight: 500;
+            text-align: justify;
+            font-size: 18px;
+
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        margin: 20px 0;
+
+        img {
+            width: 250px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

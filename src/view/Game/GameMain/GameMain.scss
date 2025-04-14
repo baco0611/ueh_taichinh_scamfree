@@ -1,0 +1,92 @@
+@use "../../../variable.scss" as var;
+
+#game-main {
+    min-height: 100vh;
+    background: url("./img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .game {
+        &-provider {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            padding-top: 8vh;
+
+            h1 {
+                color: var.$primary-color;
+                font-family: var.$side-font;
+                font-size: 35px;
+            }
+
+            h2 {
+                color: white;
+                font-family: var.$side-font;
+                padding-top: 10px;
+                
+            }
+        }
+
+        &-map {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 50px;
+
+            .map {
+                width: min(90%, 850px);
+                position: relative;
+
+                img.map-image {
+                    width: 100%;
+                }
+
+                .buttonActive {
+                    position: absolute;
+
+                    &.large {
+                        width: 10% !important;
+                    }
+
+                    &.button- {
+                        &1 {
+                            width: 6.5%;
+                            top: 17%;
+                            left: 17%;
+                        }
+
+                        &2 {
+                            width: 6.7%;
+                            top: 47%;
+                            left: 29%;
+                        }
+
+                        &3 {
+                            width: 6.9%;
+                            top: 40%;
+                            left: 48%;
+                        }
+
+                        &4 {
+                            width: 7.1%;
+                            top: 17%;
+                            left: 70%;
+                        }
+
+                        &5 {
+                            width: 7.4%;
+                            top: 63%;
+                            left: 88%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

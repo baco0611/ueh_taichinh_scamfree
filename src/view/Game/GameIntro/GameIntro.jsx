@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./GameIntro.scss"
 import { useAudio } from '../../../context/AudioContext'
 import volume from "../asset/volume.png"
@@ -16,6 +16,10 @@ export default function GameIntro() {
         name: "",
         studentCode: ""
     })
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const handleChangeData = e => {
         setUserInfo(prev => {
@@ -36,7 +40,7 @@ export default function GameIntro() {
             return;
         }
 
-        sessionStorage.setItem("user-information", JSON.stringify(userInfo))
+        sessionStorage.setItem("userInfo", JSON.stringify(userInfo))
         navigate("/game/tutorial")
     }
 
@@ -64,7 +68,7 @@ export default function GameIntro() {
                         name='name'
                         value={userInfo.name}
                         onChange={e => handleChangeData(e)}
-                        autoComplete={false}
+                        autoComplete="off"
                     />
                 </div>
                 <div className='block'>
@@ -73,7 +77,7 @@ export default function GameIntro() {
                         name='studentCode'
                         value={userInfo.studentCode}
                         onChange={e => handleChangeData(e)}
-                        autoComplete={false}
+                        autoComplete="off"
                     />
                 </div>
             </div>

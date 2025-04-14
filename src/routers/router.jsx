@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Default from "../components/Default/Default";
 import Error from "../components/Error/Error";
 import Home from "../view/Home/Home";
@@ -8,6 +8,8 @@ import GameHome from "../view/Game/GameHome/GameHome";
 import GameLayout from "../components/GameLayout/GameLayout";
 import GameIntro from "../view/Game/GameIntro/GameIntro";
 import GameTutorial from "../view/Game/GameTutorial/GameTutorial";
+import GamePlay from "../view/Game/GamePlay/GamePlay";
+import GameMain from "../view/Game/GameMain/GameMain";
 
 const router = createBrowserRouter([
     {
@@ -35,12 +37,24 @@ const router = createBrowserRouter([
                         element: <GameHome/>
                     },
                     {
-                        path: "/game/intro",
+                        path: "intro",
                         element: <GameIntro/>
                     },
                     {
-                        path: "/game/tutorial",
+                        path: "tutorial",
                         element: <GameTutorial/>
+                    },
+                    {
+                        path: "play",
+                        element: <GamePlay/>
+                    },
+                    {
+                        path: "main",
+                        element: <Navigate to={"/game/main/1"}/>
+                    },
+                    {
+                        path: "main/:id",
+                        element: <GameMain/>
                     }
                 ]
             },
