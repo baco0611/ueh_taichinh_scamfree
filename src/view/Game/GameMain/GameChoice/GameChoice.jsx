@@ -168,7 +168,7 @@ export default function GameChoice({ data, setCurrentQIndex, roundKey, setTotal,
                 })
             }
                 <div className='submit'>
-                    <button onClick={handleCheckAnswer}>Submit</button>
+                    <button onClick={handleCheckAnswer}>Xác nhận</button>
                 </div>
             </div>
         </div>

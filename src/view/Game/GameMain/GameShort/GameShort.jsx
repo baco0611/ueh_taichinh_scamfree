@@ -149,7 +149,7 @@ export default function GameShort({ data, setCurrentQIndex, roundKey, setTotal, 
                     onChange={(e) => setAnswerValue(e.target.value)}
                     required
                 />
-                <button onClick={(() => checkAnswer())}>Submit</button>
+                <button onClick={(() => checkAnswer())}>Xác nhận</button>
             </div>
         </div>
     )
