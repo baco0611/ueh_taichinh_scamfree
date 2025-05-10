@@ -47,7 +47,7 @@ export default function Feedback() {
                             ref={contentRef}
                             value={emailContent}
                             onChange={e => setEmailContent(e.target.value)}
-                            placeholder='Chúng mình có thể làm gì để cải thiện?'
+                            placeholder='Hãy cùng chúng mình xây dựng sổ tay bằng cách đóng góp những hình thức lừa đảo mới để sổ tay luôn được cập nhật và phát triển thành một cẩm nang cần thiết trong cuộc sống mọi người nhé.'
                         />
                         <button
                             onClick={e => onSubmit({
