@@ -38,6 +38,11 @@ export default function DefaultHeader() {
                     </li> */}
                     <li>
                         <Link className={clsx({
+                            active: location.pathname == "/"
+                        })} to="/">Sổ tay phòng chống</Link>
+                    </li>
+                    <li>
+                        <Link className={clsx({
                             active: location.pathname == "/game"
                         })} to="/game">Trò chơi</Link>
                     </li>
@@ -46,11 +51,6 @@ export default function DefaultHeader() {
                             active: location.pathname == "/handbook"
                         })} to="/handbook">Sổ tay phòng chống</Link>
                     </li> */}
-                    <li>
-                        <Link className={clsx({
-                            active: location.pathname == "/"
-                        })} to="/">Sổ tay phòng chống</Link>
-                    </li>
                     <li>
                         <Link className={clsx({
                             active: location.pathname == "/feedback"
@@ -77,13 +77,21 @@ export default function DefaultHeader() {
                             <FontAwesomeIcon icon={faXmark} />
                         </button>
                         <ul>
-                            <li>
+                            {/* <li>
                                 <Link 
                                     onClick={() => setIsHidden(true)}
                                     className={clsx({
                                         active: location.pathname == "/"
                                     })} to="/"
                                 >Trang chủ</Link>
+                            </li> */}
+                            <li>
+                                <Link 
+                                    onClick={() => setIsHidden(true)}
+                                    className={clsx({
+                                        active: location.pathname == "/"
+                                    })} to="/"
+                                >Sổ tay phòng chống</Link>
                             </li>
                             <li>
                                 <Link 
@@ -93,14 +101,14 @@ export default function DefaultHeader() {
                                     })} to="/game"
                                 >Game</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link 
                                     onClick={() => setIsHidden(true)}
                                     className={clsx({
                                         active: location.pathname == "/handbook"
                                     })} to="/handbook"
                                 >Sổ tay phòng chống</Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link 
                                     onClick={() => setIsHidden(true)}
