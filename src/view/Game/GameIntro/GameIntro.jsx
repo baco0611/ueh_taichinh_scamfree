@@ -71,8 +71,17 @@ export default function GameIntro() {
                         autoComplete="off"
                     />
                 </div>
-                <div className='block'>
+                {/* <div className='block'>
                     <p>Mã số sinh viên:</p>
+                    <input
+                        name='studentCode'
+                        value={userInfo.studentCode}
+                        onChange={e => handleChangeData(e)}
+                        autoComplete="off"
+                    />
+                </div> */}
+                <div className='block'>
+                    <p>Tuổi:</p>
                     <input
                         name='studentCode'
                         value={userInfo.studentCode}

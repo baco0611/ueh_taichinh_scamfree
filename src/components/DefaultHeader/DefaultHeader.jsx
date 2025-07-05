@@ -3,6 +3,8 @@ import "./DefaultHeader.scss"
 import uehLogo from "./picture/uehLogo.png"
 import doanLogo from "./picture/doanLogo.png"
 import SOFLogo from "./picture/SOFLogo.png"
+import doanTNLogo from "./picture/doanTNLogo.png"
+import catpLogo from "./picture/catpLogo.png"
 import { Link, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,26 +20,36 @@ export default function DefaultHeader() {
     return (
         <div id='defaultHeader'>
             <div className='logo'>
+                {/* <img src={uehLogo}/>
+                <img src={doanLogo}/>
+                <img src={SOFLogo}/> */}
+                <img src={catpLogo}/>
                 <img src={uehLogo}/>
+                <img src={doanTNLogo}/>
                 <img src={doanLogo}/>
                 <img src={SOFLogo}/>
             </div>
             <div className='route'>
                 <ul>
-                    <li>
+                    {/* <li>
                         <Link className={clsx({
                             active: location.pathname == "/"
                         })} to="/">Trang chủ</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link className={clsx({
                             active: location.pathname == "/game"
                         })} to="/game">Trò chơi</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link className={clsx({
                             active: location.pathname == "/handbook"
                         })} to="/handbook">Sổ tay phòng chống</Link>
+                    </li> */}
+                    <li>
+                        <Link className={clsx({
+                            active: location.pathname == "/"
+                        })} to="/">Sổ tay phòng chống</Link>
                     </li>
                     <li>
                         <Link className={clsx({
